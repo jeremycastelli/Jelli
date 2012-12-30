@@ -1,0 +1,190 @@
+/* ==|== styles for mobiles first =====================================================
+   Author: Pitch
+   ========================================================================== */
+
+
+#container{
+	margin:0 auto;
+	.clearfix;
+}
+
+
+/*
+	HEADER
+*/
+#header{
+	.column(12);
+}
+#logo{}
+#title{}
+#header p{}
+
+/* 
+	MENU PRINCIPAL 
+*/
+.menu-principal-container{
+	.menu-mobile();
+}
+
+/*
+	MAIN
+*/
+#main{
+	.clearfix;
+}
+
+/*
+	CONTENT
+*/
+
+
+.page, .single{
+	#content{
+		.column(12);
+		
+		/*
+			ARTICLE
+		*/
+		article{
+			.clearfix;
+			header{}
+			h1{}
+			.meta{
+				time{}
+				a{}
+			}
+			.post_content{
+				.clearfix;
+				p {}
+				table {}
+				ul, ol {}
+				li {}
+				ul li {}
+				ol li {}
+				
+				blockquote {}
+				blockquote:before {} /* this adds the quote before the blockquote */
+				
+				dl {}
+				dt {}
+				dd {}
+				
+				img { 
+					margin: 0 0 1.5em 0; 
+					max-width: 100%; 
+				}
+				
+				.alignleft, img.alignleft {}
+				.alignright, img.alignright {}
+				.aligncenter, img.aligncenter {}
+				
+				video, object { 
+					max-width: 100%; 
+				}
+				pre, code {
+					background: #eee;
+					border: 1px solid #cecece;
+					padding: 10px;
+				}
+				
+				.wp-caption {
+					background: #eee;
+					padding: 5px;
+				}
+				.wp-caption img {
+					margin-bottom: 0;
+					width: 100%;
+				}
+				.wp-caption p.wp-caption-text {
+					font-size: 0.85em;
+					margin: 4px 0 7px;
+					text-align: center;
+				}
+				
+				/* image gallery styles */
+				.gallery dl {}
+				.gallery dt {}
+				.gallery dd {}
+				.gallery dl a {}
+				.gallery dl img {}
+				.gallery-caption {}
+				
+				.size-full {}
+				.size-large {}
+				.size-medium {}
+				.size-thumbnail {}
+				
+	
+			}
+			footer{}
+			.tag{}
+		}
+		// type specific
+		.post {} /* general post style */
+		.page {} /* general article on a page style */
+		.attachment {} /* general style on an attatchment */
+		.sticky {} /* sticky post style */
+		.hentry {} /* hentry class */
+		.category-slug {} /* style by category (i.e. category-videos) */
+		.tag-slug {} /* style by tag (i.e. tag-news) */
+	
+	
+		/*
+			COMMENTS
+		*/
+		#comments{
+		
+		}
+		
+		/*
+			RESPOND
+		*/
+		#respond{
+		}	
+		
+		/*
+			PRECEDENT - SUIVANT
+			
+		*/
+		.prev-next
+		{
+			.clearfix;
+			.prev-link{float: left;}
+			.next-link{float: right;}
+		}
+		
+	}
+}
+
+
+/*
+	SIDEBAR RIGHT
+*/
+#sidebar-side{
+	.column(12);
+	
+	.widget {}
+	
+		.widgettitle {}
+		
+		.widget ul {}
+	
+		.widget li {}
+		
+			.widget li:first-child {}
+			.widget li:last-child {}
+		
+			.widget li a {}
+			
+			.widget li ul {}
+
+}
+
+/*
+	FOOTER
+*/
+#footer{
+	.clearfix;
+
+
+}
