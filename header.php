@@ -18,7 +18,9 @@
 		<meta name="author" content="Jeremy Castelli">
 	
 		<meta http-equiv="imagetoolbar" content="false" />
-		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<!--active thisif you want responsive design, otherwise it will break your normal layout on mobile-->
+		<!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
 		
 		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
 		
