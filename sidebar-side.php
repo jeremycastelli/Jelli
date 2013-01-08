@@ -9,7 +9,6 @@
 ?>
 				<div id="sidebar-side" class="sidebar" role="complementary">
 				
-					<?php get_search_form(); ?>
 
 					<?php if ( is_active_sidebar( 'side' ) ) : ?>
 

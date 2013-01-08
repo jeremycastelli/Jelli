@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 			
-			<div id="main" role="main">
+			<div id="main" class="main" role="main">
 				
-				<section id="content">
+				<section id="content" class="content">
 				
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+					<article id="article-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 						
-						<header>
+						<header class="article-header">
 							
 							<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 							
@@ -16,12 +16,12 @@
 						
 						</header> <!-- end article header -->
 					
-						<section class="post_content">
+						<div class="article-header">
 							<?php the_content(__('lire la suite','jelli')); ?>
 					
-						</section> <!-- end article section -->
+						</div> <!-- end article section -->
 						
-						<footer>
+						<footer class="article-footer">
 			
 							<p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
 							
