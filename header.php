@@ -68,11 +68,6 @@
 		
 				<a href="<?php echo home_url( '/' ); ?>" title="Retour à l'accueil" id="logo"><img src="<?php echo get_bloginfo('template_directory' ).'/images/logo.jpg'; ?>" alt="logo" /></a>
 			
-				<h1 id="title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				
-				<p><?php bloginfo( 'description' ); ?></p>
-				
-				
 				<a href="#main" class="visuallyhidden">Skip navigation</a>
 				<?php 
 					/*
@@ -95,7 +90,7 @@
 					  'walker'          => );
 					  */
 					  
-					  $arg = array('theme_location' => 'principal', 'container' => 'nav');
+					  $arg = array('theme_location' => 'principal', 'container' => 'nav', 'container_class' => 'main-nav');
 					wp_nav_menu( $arg ); 
 				?>
 	
