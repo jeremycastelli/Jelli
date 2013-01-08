@@ -3,7 +3,7 @@
  * Footer
  */
 ?>
-			<footer id="footer" class=".footer" role="contentinfo">
+			<footer class="footer" role="contentinfo">
 			
 				<?php get_sidebar( 'foot' ); ?>
 				

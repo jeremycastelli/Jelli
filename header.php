@@ -32,7 +32,6 @@
 		
 		<?php	
 			wp_enqueue_script( 'modernizr' , get_bloginfo('template_directory' ).'/js/libs/modernizr.js', false, null);
-			//wp_enqueue_script( 'modernizr' , get_bloginfo('template_directory' ).'/js/libs/modernizr.custom.90422.js', false, null);
 			
 			// on verifie si l'api google est accessible mais sans prendre trop de ressources grace aux transient
 			$google_jquery_url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js';			 
@@ -62,9 +61,9 @@
 
 	<body <?php body_class(); ?>>
 		
-		<div id="container">
+		<div id="container" class="container">
 		
-			<header id="header">
+			<header class="header">
 		
 				<a href="<?php echo home_url( '/' ); ?>" title="Retour à l'accueil" id="logo"><img src="<?php echo get_bloginfo('template_directory' ).'/images/logo.jpg'; ?>" alt="logo" /></a>
 			
