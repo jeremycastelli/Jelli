@@ -435,13 +435,13 @@ table {
 * For IE 6/7 only
 * Include this rule to trigger hasLayout and contain floats.
 */
-/* line 21, /Applications/MAMP/htdocs/developpement/wp-content/themes/jelli/scss/helpers/_clearfix.scss */
+/* line 19, /Applications/MAMP/htdocs/developpement/wp-content/themes/jelli/scss/helpers/_clearfix.scss */
 .clearfix {
   *zoom: 1; }
-  /* line 24, /Applications/MAMP/htdocs/developpement/wp-content/themes/jelli/scss/helpers/_clearfix.scss */
+  /* line 22, /Applications/MAMP/htdocs/developpement/wp-content/themes/jelli/scss/helpers/_clearfix.scss */
   .clearfix:after {
     clear: both; }
-  /* line 29, /Applications/MAMP/htdocs/developpement/wp-content/themes/jelli/scss/helpers/_clearfix.scss */
+  /* line 27, /Applications/MAMP/htdocs/developpement/wp-content/themes/jelli/scss/helpers/_clearfix.scss */
   .clearfix:before, .clearfix:after {
     content: " ";
     /* 1 */
