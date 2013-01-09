@@ -1,0 +1,15 @@
+@mixin mq($mq) {
+  @if $mq == xl {
+    @media (min-width: 1250px) { @content; }
+  }
+  @if $mq == l {
+    @media (min-width: 900px) { @content; }
+  }
+  @if $mq == m {
+    @media (min-width: 480px) { @content; }
+  }
+  @if $mq == s {
+    @media (max-width: 479px) { @content; }
+  }
+  // etc
+}

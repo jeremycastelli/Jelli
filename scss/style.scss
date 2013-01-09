@@ -7,9 +7,31 @@ Author URI: http://www.jeremycastelli.com/
 Version: 1.00
 Tags: html5, css3, normalize, scss
 
-License: GPL or whatever
+License: GPL
 License URI: http://www.gnu.org/copyleft/gpl.html
 
 ******************************************************************/
 
 @import "normalize";
+
+// helpers for visibility and display
+@import "helpers/display";
+// clearfix
+@import "helpers/clearfix";
+// rem mixin
+@import "helpers/rem";
+
+// put your globals variables here 
+@import "vars";
+
+@import "default";
+// change your typography parameters here
+@import "typo";
+
+// start your style here 
+
+
+
+// stop here
+
+@import "print";
