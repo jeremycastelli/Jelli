@@ -1,0 +1,33 @@
+.bloc:after, .bloc:before {
+	content: " ";
+	position: absolute;
+	width: 50%;
+	height: 100px;
+	z-index: -10;  
+}
+.bloc:before { background: green;}
+.bloc:after { background: red; }
+
+
+
+
+
+.lateral{
+
+	position:relative;
+
+	:before {  
+
+		content: " ";
+		position: absolute;
+		z-index: -10; 
+		top: 15px;  
+		left: 0;  
+		width: 100%;  
+		height: 130px;  
+		border-radius: 12px / 65px;  
+		box-shadow: 0 0 10px #555;  
+	}  
+
+
+}
