@@ -70,10 +70,9 @@
 			width: 50%;
 			height: 10%;
 			bottom: -$y;
-			left: $x;//sin($angle)*50%+1%;
-			transform: rotate(-$angle);
-			transform-origin: 0% 0%;
-			// @include box-shadow(#333 8px 2px 15px);
+			left: $x;
+			@include rotate(-$angle);
+			@include transform-origin(0%, 0%);
 			@include background-image(linear-gradient(right, #333, #fff));
 		}
 	}
@@ -86,10 +85,9 @@
 			height: 10%;
 			background: #eee;
 			bottom: -$y;
-			right: $x;//sin($angle)*50%+1%;
-			transform: rotate($angle);
-			transform-origin: 100% 0%;
-			// @include box-shadow(#333 -8px 2px 15px);
+			right: $x;
+			@include rotate($angle);
+			@include transform-origin(100%, 0%);
 			@include background-image(linear-gradient(left, #333, #fff));
 		}
 	}

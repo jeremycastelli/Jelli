@@ -33,11 +33,6 @@ require_once (FUNCTIONS_PATH . 'dashboard.php');
 require_once (FUNCTIONS_PATH . 'menu.php');
 
 /**
- * content
- */
-require_once (FUNCTIONS_PATH . 'content.php');
-
-/**
  * social
  */
 require_once(FUNCTIONS_PATH . 'social.php');
