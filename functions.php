@@ -69,6 +69,6 @@ require_once (FUNCTIONS_PATH . 'widget.php');
 //hide version number
 remove_action('wp_head', 'wp_generator');
 
-
+add_post_type_support( 'page', 'excerpt' );
 
 ?>

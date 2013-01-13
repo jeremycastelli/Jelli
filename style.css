@@ -448,6 +448,22 @@ table {
     display: table;
     /* 2 */ }
 
+/* line 1, scss/effects/_shadows.scss */
+.bloc:after, .bloc:before {
+  content: " ";
+  position: absolute;
+  width: 50%;
+  height: 100px;
+  z-index: -10; }
+
+/* line 8, scss/effects/_shadows.scss */
+.bloc:before {
+  background: green; }
+
+/* line 9, scss/effects/_shadows.scss */
+.bloc:after {
+  background: red; }
+
 /* line 1, scss/_default.scss */
 *, *:after, *:before {
   -moz-box-sizing: border-box;
