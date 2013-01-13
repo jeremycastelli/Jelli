@@ -603,6 +603,11 @@ h5, .h5 {
   text-transform: uppercase;
   letter-spacing: 2px; }
 
+/* line 38, scss/style.scss */
+.container {
+  width: 960px;
+  margin: 0 auto; }
+
 /* ==========================================================================
 Print styles.
 Inlined to avoid required HTTP connection: h5bp.com/r

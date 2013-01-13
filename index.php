@@ -16,7 +16,7 @@
 						
 						</header> <!-- end article header -->
 					
-						<div class="article-header">
+						<div class="article-content">
 							<?php the_content(__('lire la suite','jelli')); ?>
 					
 						</div> <!-- end article section -->
