@@ -1,32 +1,39 @@
-/* Author: Jeremy Castelli
+/*global jQuery*/
 
-*/
+/*
+ * CODEKIT PREPEND
+ */
+//@codekit-prepend "jquery.flexslider.js"
 
-jQuery.noConflict();
-jQuery(document).ready(function() {
-	
-	
+/*
+ * CONSOLE
+ */
+(function() {
+    var method;
+    var noop = function () {};
+    var methods = [
+        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+        'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
 
- 
+    while (length--) {
+        method = methods[length];
+
+        // Only stub undefined methods.
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+}());
+/**/
+
+/*
+ * HERE WE GO
+ */
+jQuery(document).ready(function ($) {
+	"use strict";
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
