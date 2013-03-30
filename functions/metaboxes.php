@@ -15,17 +15,17 @@ class jelli_meta_box
 	protected $_meta;
 	
 	public function jelli_meta_box($meta_box){
+		$this->_meta=$meta_box;
 		$meta_prefix = 'meta_'; 
-		foreach ($meta_box['fields'] as $meta_field) {
-			$meta_field['id'] = $meta_prefix.$meta_field['id'];
+		for ($i=0; $i<count($this->_meta['fields']); $i++) {
+			$this->_meta['fields'][$i]["id"]=$meta_prefix.$this->_meta['fields'][$i]["id"];
 		}
 
-		$this->_meta=$meta_box;
 		// Add the Meta Box
 		add_action('add_meta_boxes', array(&$this, 'add')); 
 		// Save the Data
 		add_action('save_post', array(&$this, 'save'));  
-	}    
+	} 
 	
 	function add() {  
 		global $post;
