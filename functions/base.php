@@ -86,6 +86,9 @@ class jelli_base
 		 */
 		//hide version number
 		remove_action('wp_head', 'wp_generator');
+		// remove windows live writer support
+		remove_action('wp_head', 'wlwmanifest_link');
+		remove_action ('wp_head', 'rsd_link');
 		// Remove notifications for non admins
 		$this->remove_notifications();
 		// Remove various items from dashboard.
