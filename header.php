@@ -34,7 +34,7 @@
 			wp_enqueue_script( 'modernizr' , get_bloginfo('template_directory' ).'/js/libs/modernizr.js', false, null);
 			
 			// on verifie si l'api google est accessible mais sans prendre trop de ressources grace aux transient
-			$google_jquery_url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js';			 
+			$google_jquery_url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.2/jquery.min.js';			 
 			if (get_transient('google_jquery') == true) {
 				wp_deregister_script( 'jquery' ); // unregistered key jQuery 
 				wp_register_script('jquery', $google_jquery_url, false, null);

@@ -19,7 +19,11 @@ class jelli_base
 		//load the text domain for localization
 		add_action('after_theme_setup', array(&$this,'load_domain'));
 
-	
+		/*
+		 * SCRIPTS
+		 */
+		add_action( 'wp_enqueue_scripts', array(&$this,'enqueue_scripts'));
+
 		/**
 		 *  IMAGES
 		 */
@@ -95,6 +99,9 @@ class jelli_base
 	{
 		$lang_dir = get_template_directory() . '/lang';
 		load_theme_textdomain('jelli', $lang_dir);
+	}
+	function enqueue_scripts() {
+		wp_enqueue_script('script',get_template_directory_uri().'/js/script.js',array( 'jquery' ),null,true);
 	}
 	function filter_ptags_on_images($content){
 		return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
