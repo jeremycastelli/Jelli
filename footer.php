@@ -11,7 +11,6 @@
 		
 		</div> <!-- end #container -->
 		
-		<script src="<?php echo get_template_directory_uri(); ?>/js/plugins.js"></script>	
 		<script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 		
 		<!-- Change UA-XXXXX-X to be your site's ID -->
