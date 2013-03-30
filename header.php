@@ -30,31 +30,6 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		
-		<?php	
-			wp_enqueue_script( 'modernizr' , get_bloginfo('template_directory' ).'/js/libs/modernizr.js', false, null);
-			
-			// on verifie si l'api google est accessible mais sans prendre trop de ressources grace aux transient
-			$google_jquery_url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.2/jquery.min.js';			 
-			if (get_transient('google_jquery') == true) {
-				wp_deregister_script( 'jquery' ); // unregistered key jQuery 
-				wp_register_script('jquery', $google_jquery_url, false, null);
-			} 
-			else {
-				$resp = wp_remote_head($google_jquery_url);
-				if (!is_wp_error($resp) && 200 == $resp['response']['code']) {
-					set_transient('google_jquery', true, 60 * 5);
-					wp_deregister_script( 'jquery' ); // unregistered key jQuery
-					wp_register_script('jquery', $google_jquery_url, false, null);
-				} 
-				else {
-					set_transient('google_jquery', false, 60 * 5);			
-				}
-			}	
-			wp_enqueue_script( 'jquery' ); // include jQuery
-		
-		//	wp_enqueue_script( 'hashchange' , get_bloginfo('template_directory' ).'/js/libs/jquery.ba-hashchange.min.js', array('jquery'), '1.3');
-		?>
-		
 		<?php wp_head(); ?>
 		
 	</head>
