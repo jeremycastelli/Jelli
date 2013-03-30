@@ -15,25 +15,17 @@ class jelli_login
 		// Change logo link title
 		add_action('login_headertitle',  array(&$this,'change_url_title'));
 	}
-		
-	
 	function custom_logo()
 	{
 		echo '<style type="text/css"> h1 a { background-image:url('.get_bloginfo('template_directory').'/images/logo_admin.png)  !important; } </style>';
 	}
-	
 	function change_url()
 	{
-		echo bloginfo('url');
+		return bloginfo('url');
 	}
-	
 	function change_url_title()
 	{
-		echo get_option('blogname');
+		return get_option('blogname');
 	}
-	
-	
-	
 }
-$jelli_login = new jelli_login();
 ?>

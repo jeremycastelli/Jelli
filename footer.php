@@ -5,7 +5,7 @@
 ?>
 			<footer class="footer" role="contentinfo">
 			
-				<?php get_sidebar( 'foot' ); ?>
+				<?php get_sidebar(); ?>
 				
 			</footer> <!-- end footer -->
 		
@@ -16,13 +16,15 @@
 		
 		<!-- Change UA-XXXXX-X to be your site's ID -->
 		  <script>
-		   // window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
-		   // Modernizr.load({
-		   // load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-		   // });
+			/*
+			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));
+			*/
 		  </script>
 
-		  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+		  <!-- Prompt IE 7 users to install Chrome Frame. Remove this if you want to support IE 7.
 		       chromium.org/developers/how-tos/chrome-frame-getting-started -->
 		  <!--[if lt IE 7 ]>
 		    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

@@ -48,7 +48,7 @@
 					
 					
 				</section><!-- end #content -->
-				<?php get_sidebar("side");?>
+	
 				
 			</div> <!-- end #main -->
     
