@@ -71,3 +71,21 @@ textarea {
 */
 
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+
+.col1,.col2{
+    display: inline-block;
+    width:50%;
+    img{
+        width:100%;
+        max-width: 100%;
+        height:auto;
+    }
+}
+.col1{
+    padding-right:15px;
+}
+.col2{
+    padding-left:15px;
+}
