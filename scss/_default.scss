@@ -76,6 +76,7 @@ nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0
 
 .col1,.col2{
     display: inline-block;
+    vertical-align: top;
     width:50%;
     img{
         width:100%;
