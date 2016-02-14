@@ -15,37 +15,49 @@ class jelli_meta_box
 	protected $_meta;
 	
 	public function jelli_meta_box($meta_box){
+
 		$this->_meta=$meta_box;
-		$meta_prefix = 'meta_'; 
-		for ($i=0; $i<count($this->_meta['fields']); $i++) {
+		
+		$meta_prefix = 'meta_';
+
+		// Change the field {id} by meta_{id}
+		for ( $i=0; $i<count($this->_meta['fields']); $i++) {
 			$this->_meta['fields'][$i]["id"]=$meta_prefix.$this->_meta['fields'][$i]["id"];
 		}
 
 		// Add the Meta Box
 		add_action('add_meta_boxes', array(&$this, 'add')); 
+
 		// Save the Data
 		add_action('save_post', array(&$this, 'save'));  
 	} 
 	
 	function add() {  
-		global $post;
-  	 	$id=$post->ID;
-		foreach ($this->_meta['pages'] as $page) {
-			if(isset($this->_meta['page_id']) && $this->_meta['page_id'] != $id)
-				continue;
-			add_meta_box($this->_meta['id'], $this->_meta['title'], array(&$this, 'show'), $page, $this->_meta['context'], $this->_meta['priority']);
+		
+		foreach ($this->_meta['post_type'] as $post_type) {
+			add_meta_box(
+				$this->_meta['id'], 
+				$this->_meta['title'], 
+				array(&$this, 'show'), 
+				$post_type, 
+				$this->_meta['context'], 
+				$this->_meta['priority']
+			);
 		}
+
 		add_action('admin_enqueue_scripts',array(&$this,'enqueue'));
-	    add_action('admin_head',array(&$this,'add_custom_scripts')); 
+	    //add_action('admin_head',array(&$this,'add_custom_scripts')); 
 	}  
 	
 	
 	
 	// The Callback  
 	function show() { 
-		add_action('admin_enqueue_scripts',array(&$this,'enqueue'));
-	    add_action('admin_head',array(&$this,'add_custom_scripts')); 
-		global $custom_meta_fields, $post;  
+
+		//add_action('admin_enqueue_scripts',array(&$this,'enqueue'));
+	    //add_action('admin_head',array(&$this,'add_custom_scripts')); 
+		
+		global $post;  
 		// Use nonce for verification  
 		echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';  
 	    // Begin the field table and loop  
@@ -69,15 +81,15 @@ class jelli_meta_box
 	}  
 	
 	function enqueue() {  
-		wp_enqueue_script('jquery-ui-datepicker');  
-		wp_enqueue_script('jquery-ui-slider');
-		wp_enqueue_script('jquery-ui-sortable');
-		wp_enqueue_style('jquery-ui-custom', get_template_directory_uri().'/css/jquery-ui-custom.css');  
-		wp_enqueue_script('admin-meta', get_template_directory_uri().'/js/libs/admin-meta.js');
+		//wp_enqueue_script('jquery-ui-datepicker');  
+		//wp_enqueue_script('jquery-ui-slider');
+		//wp_enqueue_script('jquery-ui-sortable');
+		//wp_enqueue_style('jquery-ui-custom', get_template_directory_uri().'/css/jquery-ui-custom.css');  
+		wp_enqueue_script('admin-meta', get_template_directory_uri().'/js/admin/meta.js');
 	}  
 
 	function add_custom_scripts() {  
-	    global $custom_meta_fields, $post;  
+	    global $post;  
 	  
 	    $output = '<script type="text/javascript"> 
 	                jQuery(function() {';  
@@ -116,7 +128,7 @@ class jelli_meta_box
 	
 	function save($post_id) { 
 	 
-	    global $custom_meta_fields;  
+	    
 	  
 	    // verify nonce  
 	    if (!isset( $_POST[ 'custom_meta_box_nonce' ] ) || !wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__)))  

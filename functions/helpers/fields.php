@@ -49,16 +49,22 @@ class jelli_fields{
 			<input type="text" name="'.$id.'" id="'.$id.'" value="'.$value.'" size="5" />';
 	}
 	public static function image($id, $value){
-		$image = get_template_directory_uri().'/images/admin-value-image.png';  
-		echo '<span class="custom_default_image" style="display:none">'.$image.'</span>';  
-		if ($value) { 		
-			$image = wp_get_attachment_image_src($value, 'medium'); $image = $image[0]; 
+			
+		//var_dump($value);
+		if ($value) { 	
+				
+			$image = wp_get_attachment_image_src($value, 'thumbnail'); 
+			//var_dump($image);
+			$image = $image[0]; 
 		}  
-		echo '<input name="'.$id.'" type="hidden" class="custom_upload_image" value="'.$value.'" /> 
-		<img src="'.$image.'" class="custom_preview_image" alt="" /><br /> 
-		<input class="custom_upload_image_button button" type="button" value="Choose Image" /> 
-		<small> <a href="#" class="custom_clear_image_button">Remove Image</a></small> 
-		<br clear="all" />';  
+		echo '<div class="meta-image">';
+		$display = ($value)?"inline":"none";
+		$display2 = ($value)?"none":"inline";
+		echo '<img id="meta-image" src="'.$image.'"  style="display:'.$display.';" /><br /> 
+			<input id="meta-image-id" name="'.$id.'" type="text" value="'.$value.'" autocomplete="off" /> 
+			<a id="meta-image-button" href="" style="display:'.$display2.';">choose image</a> 
+			<a id="meta-image-remove" href="" style="display:'.$display.';">Remove Image</a>
+		</div>';  
 	}
 
 

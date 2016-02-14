@@ -101,35 +101,35 @@ function jelli_taxonomies()
 function jelli_meta_boxes()
 {
 	$args = array(
-		'id' => '',
-		'title' => 'I',
-		'pages' => array('post'), // multiple post types
+		'id' => 'image',
+		'title' => 'Image',
+		'post_type' => array('post'),
 		'context' => 'normal',
 		'priority' => 'high',
 		'fields' => array(  
 			array(  
-				'type'  => 'textfield', // textfield, textarea, checkbox, date, slider, image
-			    'label'=> '',  
+				'type'  => 'image', // textfield, textarea, checkbox, date, slider, image
+			    'label'=> 'choose',  
 			    'desc'  => '',  
-			    'id'    => ''  
+			    'id'    => 'image-1'  
 			),
-			array(  
-				'type'  => 'radio', // select, radio
-			    'label'=> '',  
-			    'desc'  => '',  
-			    'id'    => '',  
-			    'options' => array (  
-			        'one' => array (  
-			            'label' => '',  
-			            'value' => ''  
-			        ),  
-			        'two' => array (  
-			            'label' => '',  
-			            'value' => ''  
-			        )
+			// array(  
+			// 	'type'  => 'radio', // select, radio
+			//     'label'=> '',  
+			//     'desc'  => '',  
+			//     'id'    => '',  
+			//     'options' => array (  
+			//         'one' => array (  
+			//             'label' => '',  
+			//             'value' => ''  
+			//         ),  
+			//         'two' => array (  
+			//             'label' => '',  
+			//             'value' => ''  
+			//         )
 			        
-			    )  
-			)
+			//     )  
+			// )
     	)
     ); 
     jelli_register_meta_box($args); 
