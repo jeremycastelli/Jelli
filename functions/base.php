@@ -1,7 +1,7 @@
 <?php
 
-require_once (FUNCTIONS_PATH . 'bulk.php');
-require_once (FUNCTIONS_PATH . 'metaboxes.php');
+
+require_once (FUNCTIONS_PATH . '/admin/metaboxes.php');
 require_once (FUNCTIONS_PATH . 'shortcodes.php');
 require_once (FUNCTIONS_PATH . 'login.php');
 require_once (FUNCTIONS_PATH . '/helpers/blocks.php');
