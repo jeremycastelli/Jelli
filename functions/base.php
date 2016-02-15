@@ -3,7 +3,6 @@
 
 require_once (FUNCTIONS_PATH . '/admin/metaboxes.php');
 require_once (FUNCTIONS_PATH . 'shortcodes.php');
-require_once (FUNCTIONS_PATH . 'login.php');
 require_once (FUNCTIONS_PATH . '/helpers/blocks.php');
 
 /*-----------------------------------------------------------------------------------*/
