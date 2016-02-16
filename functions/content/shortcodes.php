@@ -12,6 +12,10 @@ class jelli_shortcodes
 		
 		add_shortcode("col1", array(&$this,'col1'));
 		add_shortcode("col2", array(&$this,'col2'));
+
+
+		add_shortcode( 'new_shortcode', array(&$this,'new_shortcode'));
+
 	}
 	
 	
@@ -35,6 +39,15 @@ class jelli_shortcodes
     }
 	
 	
+    function new_shortcode( $atts, $content ){
+    	extract( shortcode_atts( array( 
+    		"key" => 'value'
+    		
+    	), $atts ) );
+    	return '<div class="new_shortcode">'.$content.'</div>';
+    }
+
+
 	
 }// end class
 ?>
