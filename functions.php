@@ -74,7 +74,7 @@ function jelli_post_types()
 }
 
 /**
- *  DEfine custom taxonomies
+ *  Define custom taxonomies
  *  the call to this function is made when necessary by jelli_base object.
  */
 function jelli_taxonomies()
@@ -96,7 +96,7 @@ function jelli_taxonomies()
 /**
  * Define meta boxes
  * the call to this function is made when necessary by metaboxes.php.
- * use value with meta_{id}
+ * use value with get_post_meta($post->ID,'meta_{id}',true);
  */
 function jelli_meta_boxes()
 {
