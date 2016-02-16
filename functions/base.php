@@ -2,8 +2,9 @@
 
 
 require_once (FUNCTIONS_PATH . '/admin/metaboxes.php');
-require_once (FUNCTIONS_PATH . 'shortcodes.php');
-require_once (FUNCTIONS_PATH . '/helpers/blocks.php');
+
+require_once (FUNCTIONS_PATH . '/content/shortcodes.php');
+require_once (FUNCTIONS_PATH . '/content/blocks.php');
 
 /*-----------------------------------------------------------------------------------*/
 /* Functions for images
