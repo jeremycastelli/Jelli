@@ -18,12 +18,14 @@ html{
 */
 
 ::-moz-selection {
-    background: $selection-color;
+    background: $selection-bg-color;
+    color:$selection-color;
     text-shadow: none;
 }
 
 ::selection {
-    background: $selection-color;
+    background: $selection-bg-color;
+    color:$selection-color;
     text-shadow: none;
 }
 
