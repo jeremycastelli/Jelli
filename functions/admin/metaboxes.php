@@ -1,5 +1,5 @@
 <?php
-require_once (FUNCTIONS_PATH . '/helpers/fields.php');
+require_once (FUNCTIONS_PATH . './form/fields.php');
 
 if (function_exists('jelli_meta_boxes'))
 {

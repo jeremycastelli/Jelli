@@ -17,7 +17,6 @@ require_once (FUNCTIONS_PATH . 'base.php');
 // init
 $jelli_base = new jelli_base();
 $jelli_shortcodes = new jelli_shortcodes();
-$jelli_login = new jelli_login();
 $jelli_blocks = new jelli_blocks();
 
 
