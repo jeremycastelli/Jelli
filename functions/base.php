@@ -106,7 +106,7 @@ class jelli_base
 		wp_enqueue_script( 'modernizr' , get_template_directory_uri().'/js/libs/modernizr.js', false, null);
 		wp_deregister_script( 'jquery' );
 		// on verifie si l'api google est accessible mais sans prendre trop de ressources grace aux transient
-		$jquery_url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';			 
+		$jquery_url = 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js';			 
 		
 		if (get_transient('google_jquery') == false) {
 			$resp = wp_remote_head($jquery_url);
