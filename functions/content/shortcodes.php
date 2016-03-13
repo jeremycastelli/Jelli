@@ -28,6 +28,7 @@ class jelli_shortcodes
         );
 
         $content = strtr($content, $array);
+        $content = trim(preg_replace('~[\r\n]+~', '', $content));
 
 		return $content;
     } 
