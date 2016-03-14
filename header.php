@@ -40,7 +40,7 @@
 		
 			<header class="header">
 		
-				<a href="<?php echo home_url( '/' ); ?>" title="Retour à l'accueil" class="logo"><img src="<?php echo get_bloginfo('template_directory' ).'/images/logo.jpg'; ?>" alt="logo" /></a>
+				<a href="<?php echo home_url( '/' ); ?>" title="Retour à l'accueil" class="logo"><img src="<?php echo get_bloginfo('template_directory' ).'/images/logo.png'; ?>" alt="logo" /></a>
 			
 				<a href="#main" class="visuallyhidden">Skip navigation</a>
 				<?php 
